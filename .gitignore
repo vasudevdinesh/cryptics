@@ -1,0 +1,25 @@
+# Node
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.db
+
+# Foundry
+cache/
+out/
+broadcast/
+.out/
+.cache/
+
+# General
+.env
+.DS_Store
