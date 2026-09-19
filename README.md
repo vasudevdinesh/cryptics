@@ -122,7 +122,7 @@ This only happens for the rare large moves. Here, RWJO brings in outside reviewe
 | [`SoftCapController.sol`](contracts/src/layer2/SoftCapController.sol) | 2 | Limits how fast a medium-sized move can take effect, without pausing the protocol. |
 | [`SpotCheckPanel.sol`](contracts/src/layer2/SpotCheckPanel.sol) | 2 | A quick 3-reviewer sanity check that runs in the background during medium moves, inside the delay the protocol already has. |
 | [`JurorRegistry.sol`](contracts/src/layer3/JurorRegistry.sol) | 3 | Manages the pool of bonded reviewers: who's registered, how much they've staked, and how their reputation changes over time. |
-| [`RandomSelector.sol`](contracts/src/layer3/RandomSelector.sol) | 3 | Randomly picks reviewers for a large-move review, weighted by bond size and track record, using Chainlink VRF so the draw can't be predicted or gamed. |
+| [`RandomSelector.sol`](contracts/src/layer3/RandomSelector.sol) | 3 | Randomly picks reviewers for a large-move review, weighted by bond size and track record, using VRF-compatible randomized selection, demonstrated with a mock VRF coordinator in the local PoC. |
 | [`DisputeModule.sol`](contracts/src/layer3/DisputeModule.sol) | 3 | Runs the sealed-vote review process end to end, and makes sure a disputed price is never used as a fallback if the review is inconclusive. |
 | [`HoneypotInjector.sol`](contracts/src/layer3/HoneypotInjector.sol) | 3 | Occasionally inserts a review round where the correct answer is already known, to catch reviewers who vote dishonestly. |
 | [`DeviationCap.sol`](contracts/src/layer3/DeviationCap.sol) | 3 | A hard contract-level rule that no price can move more than 15% in one round, regardless of what the jury decides. |
