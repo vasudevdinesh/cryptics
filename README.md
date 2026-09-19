@@ -1,4 +1,4 @@
-# RWJO v4 — Reputation-Weighted Jury Oracle
+# RWJO — Reputation-Weighted Jury Oracle
 
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.24-363636?logo=solidity)](https://soliditylang.org/)
 [![Foundry](https://img.shields.io/badge/Foundry-1.8.3-orange?logo=ethereum)](https://getfoundry.sh/)
@@ -11,7 +11,7 @@
 
 ## What this is, in plain terms
 
-RWJO v4 sits between raw price feeds (Coinbase, Binance, Kraken, OKX, Deribit) and a lending protocol that needs to know what an asset is worth right now. Getting that number wrong is costly in either direction:
+RWJO sits between raw price feeds (Coinbase, Binance, Kraken, OKX, Deribit) and a lending protocol that needs to know what an asset is worth right now. Getting that number wrong is costly in either direction:
 
 - **Too trusting**, and someone can feed the protocol a fake price and drain collateral.
 - **Too jumpy**, and the protocol freezes every time the market has a normal wobble — which locks users out and causes its own damage.
